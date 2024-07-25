@@ -102,7 +102,7 @@
       }
     },
     {
-      "mod_name": "KakarikoGraveyardLevel",
+      "mod_name": "ExampleLevel",
       "pak_dir_structure": "~mods",
       "mod_name_dir_type": "Mods",
       "use_mod_name_dir_name_override": false,
