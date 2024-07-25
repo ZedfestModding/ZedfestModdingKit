@@ -71,4 +71,7 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = "UnrealAutoMod")
         static void OpenWebsite(FString URL);
+
+    UFUNCTION(BlueprintCallable, Category = "UnrealAutoMod")
+        UObject* LoadSoftObject(TSoftObjectPtr<UObject> SoftObject);
 };
