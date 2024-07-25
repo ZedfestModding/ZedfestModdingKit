@@ -1,0 +1,101 @@
+2024-07-25 01:16:23,361 - log - INFO - Function: test_mods_all was called
+2024-07-25 01:16:23,361 - log - INFO - Args:
+2024-07-25 01:16:23,361 - log - INFO - Arg: test_mods_all
+2024-07-25 01:16:23,361 - log - INFO - Arg: C:/Users/Mythical/Documents/GitHub/ZedfestModdingKit/Plugins/UnrealAutoMod/Resources/UnrealAutoMod/default/settings.json
+2024-07-25 01:16:24,149 - log - INFO - Script State: changed to ScriptStateType.INIT
+2024-07-25 01:16:24,149 - log - INFO - Routine Check: ScriptStateType.INIT is running
+2024-07-25 01:16:24,149 - log - INFO - Routine Check: ScriptStateType.INIT finished
+2024-07-25 01:16:24,149 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:24,149 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:24,150 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:24,150 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:24,150 - log - INFO - Thread: Constant Thread Started
+2024-07-25 01:16:24,150 - log - INFO - Script State: changed to ScriptStateType.POST_INIT
+2024-07-25 01:16:24,151 - log - INFO - Routine Check: ScriptStateType.POST_INIT is running
+2024-07-25 01:16:24,151 - log - INFO - Routine Check: ScriptStateType.POST_INIT finished
+2024-07-25 01:16:24,151 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:24,151 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:24,151 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:24,151 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:24,151 - log - INFO - Script State: changed to ScriptStateType.PRE_COOKING
+2024-07-25 01:16:24,152 - log - INFO - Routine Check: ScriptStateType.PRE_COOKING is running
+2024-07-25 01:16:24,152 - log - INFO - Routine Check: ScriptStateType.PRE_COOKING finished
+2024-07-25 01:16:24,152 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:24,152 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:24,152 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:24,152 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:24,152 - log - INFO - Command: Engine\Build\BatchFiles\RunUAT.bat BuildCookRun -project="C:/Users/Mythical/Documents/Github/ZedfestModdingKit/KevinSpel.uproject" -noP4 -cook -iterate -skipstage -nocompileeditor -nodebuginfo -unversionedcookedcontent running with the ExecutionMode.SYNC enum
+2024-07-25 01:16:33,765 - log - INFO - Command: Engine\Build\BatchFiles\RunUAT.bat BuildCookRun -project="C:/Users/Mythical/Documents/Github/ZedfestModdingKit/KevinSpel.uproject" -noP4 -cook -iterate -skipstage -nocompileeditor -nodebuginfo -unversionedcookedcontent finished
+2024-07-25 01:16:33,765 - log - INFO - Script State: changed to ScriptStateType.POST_COOKING
+2024-07-25 01:16:33,765 - log - INFO - Routine Check: ScriptStateType.POST_COOKING is running
+2024-07-25 01:16:33,765 - log - INFO - Routine Check: ScriptStateType.POST_COOKING finished
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:33,766 - log - INFO - Script State: changed to ScriptStateType.PRE_MODS_UNINSTALL
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.PRE_MODS_UNINSTALL is running
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.PRE_MODS_UNINSTALL finished
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:33,766 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:33,767 - log - INFO - Script State: changed to ScriptStateType.POST_MODS_UNINSTALL
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.POST_MODS_UNINSTALL is running
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.POST_MODS_UNINSTALL finished
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:33,767 - log - INFO - Script State: changed to ScriptStateType.PRE_MODS_INSTALL
+2024-07-25 01:16:33,767 - log - INFO - Routine Check: ScriptStateType.PRE_MODS_INSTALL is running
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.PRE_MODS_INSTALL finished
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:33,768 - log - INFO - Script State: changed to ScriptStateType.PRE_PAK_DIR_SETUP
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.PRE_PAK_DIR_SETUP is running
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.PRE_PAK_DIR_SETUP finished
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:33,768 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:33,769 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:33,769 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:56,094 - log - INFO - Script State: changed to ScriptStateType.POST_PAK_DIR_SETUP
+2024-07-25 01:16:56,123 - log - INFO - Routine Check: ScriptStateType.POST_PAK_DIR_SETUP is running
+2024-07-25 01:16:56,154 - log - INFO - Routine Check: ScriptStateType.POST_PAK_DIR_SETUP finished
+2024-07-25 01:16:56,190 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:56,218 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:56,250 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:56,281 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:56,326 - log - INFO - Command: "C:/modding/unreal_engine/repak/repak.exe" pack "C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Resources\UnrealAutoMod/working_dir/ModLoader_P" "D:/SteamLibrary/steamapps/common/Zedfest/KevinSpel/Content/Paks/~mods/ModLoader_P.pak" --compression Zlib --version V8A running with the ExecutionMode.SYNC enum
+2024-07-25 01:16:56,417 - log - INFO - Command: "C:/modding/unreal_engine/repak/repak.exe" pack "C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Resources\UnrealAutoMod/working_dir/ModLoader_P" "D:/SteamLibrary/steamapps/common/Zedfest/KevinSpel/Content/Paks/~mods/ModLoader_P.pak" --compression Zlib --version V8A finished
+2024-07-25 01:16:56,447 - log - INFO - Command: "C:/modding/unreal_engine/repak/repak.exe" pack "C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Resources\UnrealAutoMod/working_dir/MapKit" "D:/SteamLibrary/steamapps/common/Zedfest/KevinSpel/Content/Paks/~mods/MapKit.pak" --compression Zlib --version V8A running with the ExecutionMode.SYNC enum
+2024-07-25 01:16:56,731 - log - INFO - Command: "C:/modding/unreal_engine/repak/repak.exe" pack "C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Resources\UnrealAutoMod/working_dir/MapKit" "D:/SteamLibrary/steamapps/common/Zedfest/KevinSpel/Content/Paks/~mods/MapKit.pak" --compression Zlib --version V8A finished
+2024-07-25 01:16:56,762 - log - INFO - Command: "C:/modding/unreal_engine/repak/repak.exe" pack "C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Resources\UnrealAutoMod/working_dir/ExampleLevel" "D:/SteamLibrary/steamapps/common/Zedfest/KevinSpel/Content/Paks/~mods/ExampleLevel.pak" --compression Zlib --version V8A running with the ExecutionMode.SYNC enum
+2024-07-25 01:16:56,854 - log - INFO - Command: "C:/modding/unreal_engine/repak/repak.exe" pack "C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Resources\UnrealAutoMod/working_dir/ExampleLevel" "D:/SteamLibrary/steamapps/common/Zedfest/KevinSpel/Content/Paks/~mods/ExampleLevel.pak" --compression Zlib --version V8A finished
+2024-07-25 01:16:56,872 - log - INFO - Script State: changed to ScriptStateType.POST_MODS_INSTALL
+2024-07-25 01:16:56,899 - log - INFO - Routine Check: ScriptStateType.POST_MODS_INSTALL is running
+2024-07-25 01:16:56,916 - log - INFO - Routine Check: ScriptStateType.POST_MODS_INSTALL finished
+2024-07-25 01:16:56,934 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:56,966 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:56,992 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:57,025 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:57,056 - log - INFO - Script State: changed to ScriptStateType.PRE_GAME_LAUNCH
+2024-07-25 01:16:57,089 - log - INFO - Routine Check: ScriptStateType.PRE_GAME_LAUNCH is running
+2024-07-25 01:16:57,119 - log - INFO - Routine Check: ScriptStateType.PRE_GAME_LAUNCH finished
+2024-07-25 01:16:57,152 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:16:57,168 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:16:57,194 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:16:57,228 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
+2024-07-25 01:16:57,268 - log - INFO - Command: C:\Program Files (x86)\Steam\steam.exe -applaunch 1037080 -fileopenlog -NOSPLASH started with the ExecutionMode.ASYNC enum
+2024-07-25 01:16:57,274 - log - INFO - Thread: Game Monitoring Thread Started
+2024-07-25 01:17:01,914 - log - INFO - Process: Found Game Process
+2024-07-25 01:17:02,837 - log - INFO - Window: Game Window Found
+2024-07-25 01:17:02,838 - log - INFO - Script State: changed to ScriptStateType.POST_GAME_LAUNCH
+2024-07-25 01:17:02,838 - log - INFO - Routine Check: ScriptStateType.POST_GAME_LAUNCH is running
+2024-07-25 01:17:02,839 - log - INFO - Routine Check: ScriptStateType.POST_GAME_LAUNCH finished
+2024-07-25 01:17:02,839 - log - INFO - Routine Check: ScriptStateType.PRE_ALL is running
+2024-07-25 01:17:02,839 - log - INFO - Routine Check: ScriptStateType.PRE_ALL finished
+2024-07-25 01:17:02,839 - log - INFO - Routine Check: ScriptStateType.POST_ALL is running
+2024-07-25 01:17:02,839 - log - INFO - Routine Check: ScriptStateType.POST_ALL finished
