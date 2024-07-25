@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-UnrealAutoMod-0001.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Intermediate\Build\Win64\KevinSpelEditor\Development\UnrealEd\SharedPCH.UnrealEd.h.obj"
+"C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Intermediate\Build\Win64\UE4Editor\Development\UnrealAutoMod\UnrealAutoModBaseWidget.cpp.obj"
+"C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Intermediate\Build\Win64\UE4Editor\Development\UnrealAutoMod\UnrealAutoModUtilities.cpp.obj"
+"C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Intermediate\Build\Win64\UE4Editor\Development\UnrealAutoMod\Module.UnrealAutoMod.cpp.obj"
+"C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Intermediate\Build\Win64\UE4Editor\Development\UnrealAutoMod\Module.UnrealAutoMod.gen.cpp.obj"
+"C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Intermediate\Build\Win64\UE4Editor\Development\UnrealAutoMod\Default.rc2.res"
+/OUT:"C:\Users\Mythical\Documents\GitHub\ZedfestModdingKit\Plugins\UnrealAutoMod\Intermediate\Build\Win64\UE4Editor\Development\UnrealAutoMod\UE4Editor-UnrealAutoMod-0001.lib"
+/INCLUDE:IMPLEMENT_MODULE_UnrealAutoMod

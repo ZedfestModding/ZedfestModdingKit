@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.UnrealAutoMod.cpp.obj": [
+			"UnrealAutoMod.cpp.obj",
+			"UnrealAutoModStyle.cpp.obj",
+			"UnrealAutoModCommands.cpp.obj",
+			"UnrealAutoModBaseWidget.cpp.obj",
+			"UnrealAutoModUtilities.cpp.obj"
+		],
+		"Module.UnrealAutoMod.gen.cpp.obj": [
+			"UnrealAutoMod.init.gen.cpp.obj",
+			"UnrealAutoModBaseWidget.gen.cpp.obj",
+			"UnrealAutoModEnums.gen.cpp.obj",
+			"UnrealAutoModStructs.gen.cpp.obj",
+			"UnrealAutoModUtilities.gen.cpp.obj"
+		]
+	}
+}

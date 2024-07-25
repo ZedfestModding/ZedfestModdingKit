@@ -47,7 +47,6 @@ SourceArt/**/*.tga
 
 # Binary Files
 Binaries/*
-Plugins/*/Binaries/*
 
 # Builds
 Build/*
@@ -68,12 +67,16 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
-Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
 
 # Include specific folders
+!Build/MySpecialFolder/
+!Intermediate/MySpecialFolder/
+!Content/Mods/KakarikoGraveyardLevel/
+
+# Include all plugins
 !Plugins/
 
 # Note: Ensure these rules come after ignoring parent directories
