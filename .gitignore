@@ -72,4 +72,8 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-/Content/Mods/KakarikoGraveyardLevel
+
+# Include specific folders
+!Plugins/
+
+# Note: Ensure these rules come after ignoring parent directories
