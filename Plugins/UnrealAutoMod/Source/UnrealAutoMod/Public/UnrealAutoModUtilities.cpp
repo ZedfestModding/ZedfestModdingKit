@@ -289,3 +289,17 @@ void UUnrealAutoModUtilities::OpenWebsite(FString URL)
 {
     FPlatformProcess::LaunchURL(*URL, nullptr, nullptr);
 }
+
+UObject* UUnrealAutoModUtilities::LoadSoftObject(TSoftObjectPtr<UObject> SoftObject)
+{
+    if (SoftObject.IsValid())
+    {
+        return SoftObject.Get();
+    }
+    else if (SoftObject.ToSoftObjectPath().IsValid())
+    {
+        return SoftObject.LoadSynchronous();
+    }
+
+    return nullptr;
+}
