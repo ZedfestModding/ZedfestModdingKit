@@ -5,8 +5,8 @@
     "window_title": "UnrealAutoMod Automation Script"
   },
   "engine_info": {
-    "unreal_engine_dir": "D:/unreal_engine_installs/UE_4.22",
-    "unreal_project_file": "C:/Users/Mythical/Documents/Github/ZedfestModdingKit/KevinSpel.uproject",
+    "unreal_engine_dir": "D:/unreal_engine_installs/UE_4.27",
+    "unreal_project_file": "C:/Users/Mythical/Documents/Github/flaf_mod_loader/flaf.uproject",
     "toggle_engine_during_testing": false,
     "resave_packages_and_fix_up_redirectors_before_engine_open": true,
     "engine_launch_args": [],
@@ -19,14 +19,14 @@
     "unreal_engine_minor_version": "22"
   },
   "game_info": {
-    "game_exe_path": "D:/SteamLibrary/steamapps/common/Zedfest/KevinSpel/Binaries/Win64/Zedfest.exe",
-    "launch_type": "exe",
+    "game_exe_path": "D:/SteamLibrary/steamapps/common/Five Laps at Freddy's Demo/flaf/Binaries/Win64/flaf-Win64-Shipping.exe",
+    "launch_type": "steam",
     "override_automatic_launcher_exe_finding": false,
     "game_launcher_exe": "C:/Program Files (x86)/Steam/steam.exe",
-    "game_id": 1037080,
+    "game_id": 3107080,
     "skip_launching_game": false,
     "override_automatic_window_title_finding": true,
-    "window_title_override_string": "Zedfest",
+    "window_title_override_string": "flaf",
     "launch_params": [
       "-fileopenlog",
       "-NOSPLASH"
@@ -94,10 +94,40 @@
   ],
   "mod_pak_info": [
     {
-      "mod_name": "ModLoader_P",
+      "mod_name": "Z_ModLoader_P",
       "pak_dir_structure": "~mods",
       "mod_name_dir_type": "Mods",
       "use_mod_name_dir_name_override": true,
+      "mod_name_dir_name_override": "ModLoader",
+      "pak_chunk_num": null,
+      "packing_type": "repak",
+      "compression_type": "Zlib",
+      "is_enabled": true,
+      "manually_specified_assets": {
+        "asset_paths": [],
+        "tree_paths": []
+      }
+    },
+{
+      "mod_name": "QuitTest",
+      "pak_dir_structure": "LogicMods",
+      "mod_name_dir_type": "Mods",
+      "use_mod_name_dir_name_override": false,
+      "mod_name_dir_name_override": "ModEntry",
+      "pak_chunk_num": null,
+      "packing_type": "repak",
+      "compression_type": "Zlib",
+      "is_enabled": false,
+      "manually_specified_assets": {
+        "asset_paths": [],
+        "tree_paths": []
+      }
+    },
+{
+      "mod_name": "SpeedTest",
+      "pak_dir_structure": "LogicMods",
+      "mod_name_dir_type": "Mods",
+      "use_mod_name_dir_name_override": false,
       "mod_name_dir_name_override": "ModEntry",
       "pak_chunk_num": null,
       "packing_type": "repak",
@@ -108,27 +138,12 @@
         "tree_paths": []
       }
     },
-    {
-      "mod_name": "MapKit",
-      "pak_dir_structure": "~mods",
+{
+      "mod_name": "Testing",
+      "pak_dir_structure": "LogicMods",
       "mod_name_dir_type": "Mods",
       "use_mod_name_dir_name_override": false,
-      "mod_name_dir_name_override": null,
-      "pak_chunk_num": null,
-      "packing_type": "repak",
-      "compression_type": "Zlib",
-      "is_enabled": true,
-      "manually_specified_assets": {
-        "asset_paths": [],
-        "tree_paths": []
-      }
-    },
-    {
-      "mod_name": "ExampleLevel",
-      "pak_dir_structure": "~mods",
-      "mod_name_dir_type": "Mods",
-      "use_mod_name_dir_name_override": false,
-      "mod_name_dir_name_override": null,
+      "mod_name_dir_name_override": "ModEntry",
       "pak_chunk_num": null,
       "packing_type": "repak",
       "compression_type": "Zlib",
