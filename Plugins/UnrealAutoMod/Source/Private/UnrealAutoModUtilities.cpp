@@ -1,6 +1,6 @@
 #include "UnrealAutoModUtilities.h"
-#include "PlatformProcess.h"
-#include "Paths.h"
+#include "HAL/PlatformProcess.h"
+#include "Misc/Paths.h"
 #include "HAL/FileManager.h"
 #include "Engine/Engine.h"
 #include "UObject/Class.h"
@@ -27,6 +27,63 @@ void UUnrealAutoModUtilities::LaunchExternalExecutable(const FString& FilePath, 
         UE_LOG(LogTemp, Error, TEXT("Failed to launch executable: %s"), *FilePath);
     }
 }
+
+#if PLATFORM_WINDOWS
+#include "Windows/AllowWindowsPlatformTypes.h"
+#include "Windows/PreWindowsApi.h"
+#include <windows.h>
+#include "Windows/PostWindowsApi.h"
+#include "Windows/HideWindowsPlatformTypes.h"
+#endif
+
+void UUnrealAutoModUtilities::LaunchExternalExecutableNoHead(const FString& FilePath, const TArray<FString>& Parameters)
+{
+    FString Command = FString::Printf(TEXT("\"%s\""), *FilePath);
+
+    for (const FString& Param : Parameters)
+    {
+        Command += FString::Printf(TEXT(" %s"), *Param);
+    }
+
+#if PLATFORM_WINDOWS
+    // Set up STARTUPINFO to hide the window for cmd.exe
+    STARTUPINFO StartupInfo;
+    PROCESS_INFORMATION ProcessInfo;
+
+    ZeroMemory(&StartupInfo, sizeof(StartupInfo));
+    ZeroMemory(&ProcessInfo, sizeof(ProcessInfo));
+
+    StartupInfo.cb = sizeof(StartupInfo);
+    StartupInfo.dwFlags |= STARTF_USESHOWWINDOW;
+    StartupInfo.wShowWindow = SW_HIDE; // Hide the cmd.exe window
+
+    // Create the full command to run via cmd.exe
+    FString FullCommand = FString::Printf(TEXT("cmd.exe /C START /B \"%s\" %s"), *FilePath, *Command);
+    TCHAR* CommandLine = FullCommand.GetCharArray().GetData();
+
+    // Create process without window (CREATE_NO_WINDOW)
+    if (CreateProcess(nullptr, CommandLine, nullptr, nullptr, false, CREATE_NO_WINDOW, nullptr, nullptr, &StartupInfo, &ProcessInfo))
+    {
+        UE_LOG(LogTemp, Log, TEXT("Successfully launched executable headlessly: %s"), *FilePath);
+        CloseHandle(ProcessInfo.hProcess);
+        CloseHandle(ProcessInfo.hThread);
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to launch executable headlessly: %s"), *FilePath);
+    }
+
+#else
+    // For non-Windows platforms, fallback to FPlatformProcess (doesn't guarantee no window)
+    FProcHandle ProcessHandle = FPlatformProcess::CreateProc(*FilePath, *Command, true, false, false, nullptr, 0, nullptr, nullptr);
+
+    if (!ProcessHandle.IsValid())
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to launch executable headlessly: %s"), *FilePath);
+}
+#endif
+}
+
 
 FString UUnrealAutoModUtilities::GetProjectDirectory()
 {
@@ -164,20 +221,31 @@ bool UUnrealAutoModUtilities::CreateTextFile(const FString& FileName, const FStr
     return FFileHelper::SaveStringToFile(FileContents, *FileName);
 }
 
+#include "UnrealAutoModUtilities.h"
+#include <fstream>
+#include <sstream>
+#include "Misc/MessageDialog.h"
+
 FString UUnrealAutoModUtilities::ReadFile(const FString& FileName)
 {
-    FString FileContents;
-    // Read the file contents into the FString
-    if (FFileHelper::LoadFileToString(FileContents, *FileName))
-    {
-        return FileContents;
-    }
-    else
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Failed to read file: %s"), *FileName);
-        return FString();
-    }
+	std::ifstream FileStream(TCHAR_TO_UTF8(*FileName), std::ios::in | std::ios::binary);
+
+	if (!FileStream.is_open())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Failed to open file: %s"), *FileName);
+		return FString();
+	}
+
+	std::stringstream Buffer;
+	Buffer << FileStream.rdbuf();
+
+	FileStream.close();
+
+	// Convert the read content to FString
+	std::string Content = Buffer.str();
+	return FString(Content.c_str());
 }
+
 
 TArray<FString> UUnrealAutoModUtilities::GetFunctionNames(UObject* Object)
 {
@@ -255,22 +323,26 @@ TArray<UObject*> UUnrealAutoModUtilities::GetAllInstancedObjectsOfClass(UClass* 
 
 TArray<FString> UUnrealAutoModUtilities::GetEnumValuesAsString(UEnum* Enum)
 {
-    TArray<FString> EnumValues;
+	TArray<FString> EnumValues;
 
-    if (!Enum)
-    {
-        return EnumValues;
-    }
+	if (!Enum)
+	{
+		return EnumValues;
+	}
 
-    for (int32 i = 0; i < Enum->NumEnums(); ++i)
-    {
-        if (!Enum->HasMetaData(TEXT("Hidden"), i))
-        {
-            EnumValues.Add(Enum->GetDisplayNameText(i).ToString());
-        }
-    }
+	for (int32 i = 0; i < Enum->NumEnums(); ++i)
+	{
+		if (!Enum->HasMetaData(TEXT("Hidden"), i))
+		{
+#if ENGINE_MAJOR_VERSION >= 5  // For Unreal Engine 5 and above
+            EnumValues.Add(Enum->GetDisplayNameTextByIndex(i).ToString());
+#else  // For Unreal Engine 4.x and below
+            EnumValues.Add(Enum->GetNameByIndex(i).ToString());
+#endif
+		}
+	}
 
-    return EnumValues;
+	return EnumValues;
 }
 
 void UUnrealAutoModUtilities::OpenDirectory(FString DirectoryPath)
