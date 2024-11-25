@@ -6,17 +6,17 @@
 	"Plugins": [
 		{
 			"Name": "AutoSizeComments",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/ae89a2c4ab384de0a3f213b23de324f3"
 		},
 		{
 			"Name": "CheckCompileBP",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/be3b2113774d4c919b374108984ca3fc"
 		},
 		{
 			"Name": "ElectronicNodes",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/5cb2a394d0c04e73891762be4cbd7216"
 		},
 		{
