@@ -1,0 +1,6 @@
+FileVersion:2
+Type:Dynamic
+Guid:1735F481-47BE-6829-3CAB-37AD060BACA1
+ParentGuid:00000000-0000-0000-0000-000000000000
+
+(triangles>8) AND (Path:'/Game'...)
