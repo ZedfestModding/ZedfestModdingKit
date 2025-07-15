@@ -1,0 +1,52 @@
+site_name: ModName
+site_url: https://GithubAccount.github.io/ModName/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+  icon:
+    logo: fontawesome/solid/?
+    repo: fontawesome/brands/github
+  palette:
+    # Auto toggle for the user to switch between modes based on system preference
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to system preference
+
+    # Default Dark Mode (for users who have dark mode preference)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: deep purple
+      accent: cyan
+
+    # Default Light Mode (for users who have light mode preference)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: deep purple
+      accent: cyan
+
+nav:
+  - Home: index.md
+
+extra_css:
+  - stylesheets/extra.css
+
+repo_url: https://github.com/GithubAccount/ModName
+repo_name: ModName
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GithubAccount/ModName
+      name: ModName on Github
+    - icon: fontawesome/brands/discord
+      link: Your Discord Here
+      name: ModName Discord Server
