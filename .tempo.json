@@ -4,7 +4,6 @@
     "unreal_project_file": "Z:\\GitHub\\ZedfestModdingKit\\KevinSpel.uproject"
   },
   "game_info": {
-    "game_exe_path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Zedfest\\KevinSpel\\Binaries\\Win64\\Zedfest.exe",
     "launch_type": "steam",
 	"game_id": 1037080,
     "window_title_override": "Zedfest",
@@ -36,8 +35,9 @@
       "mod_name": "ModLoader_P",
       "mod_name_dir_name_override": "ModEntry",
       "mod_name_dir_type": "Mods",
-      "packing_type": "repak",
+      "packing_type": "engine",
       "pak_dir_structure": "~mods",
+	  "pak_chunk_num": 1,
       "use_mod_name_dir_name_override": true
     },
     {
@@ -46,17 +46,15 @@
       "mod_name": "MapKit",
       "mod_name_dir_type": "Mods",
       "packing_type": "repak",
-      "pak_dir_structure": "~mods",
-	  "use_mod_name_dir_name_override": false
+      "pak_dir_structure": "~mods"
     },
     {
       "compression_type": "Zlib",
       "is_enabled": true,
       "mod_name": "ExampleLevel",
       "mod_name_dir_type": "Mods",
-      "packing_type": "repak",
-      "pak_dir_structure": "~mods",
-	  "use_mod_name_dir_name_override": false
+      "packing_type": "unreal_pak",
+      "pak_dir_structure": "~mods"
     }
   ]
 }
