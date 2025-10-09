@@ -75,3 +75,4 @@ DerivedDataCache/*
 /Plugins/UnrealAutoMod/Resources/UnrealAutoMod/logs
 /Plugins/UnrealAutoMod/Resources/UnrealAutoMod/working_dir
 /Plugins/UnrealAutoMod/Resources/UModel
+/mod_packaging/releases

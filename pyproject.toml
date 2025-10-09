@@ -8,6 +8,7 @@ dependencies = [
     "commitizen>=4.8.3",
     "mkdocs-material>=9.6.15",
     "pre-commit>=4.2.0",
+    "tempo-cli",
 ]
 
 [tool.commitizen]
@@ -16,3 +17,6 @@ tag_format = "$version"
 version_scheme = "semver2"
 version_provider = "uv"
 update_changelog_on_bump = true
+
+[tool.uv.sources]
+tempo-cli = { git = "https://github.com/Tempo-Organization/tempo-cli" }
