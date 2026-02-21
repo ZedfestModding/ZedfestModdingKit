@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup tempo-cli
-        uses: Tempo-Organization/setup-tempo-cli@v1
+        uses: Tempo-Organization/setup-tempo-cli@v1.1
 
       - name: Run tempo-cli mod release creation command
         run: tempo_cli run full_run_all --settings_json ".tempo.json"
