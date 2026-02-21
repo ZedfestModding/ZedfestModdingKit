@@ -30,7 +30,7 @@ jobs:
 
       - name: List all releases
         shell: cmd
-        run: dir Modding/releases /b /a-d *.zip > release_list.txt
+        run: dir "%CD%/Modding/releases" /b /a-d *.zip > release_list.txt
 
       - name: Temporary body.md creation
         shell: cmd
