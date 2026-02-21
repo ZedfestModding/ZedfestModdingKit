@@ -1,4 +1,4 @@
-name: example_map_release
+name: make_mod_releases
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  make_release:
-    name: example_map_release
+  make_mod_releases:
+    name: make_mod_releases
     runs-on: [self-hosted, windows, x64]
 
     steps:
