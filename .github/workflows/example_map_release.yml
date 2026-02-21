@@ -28,6 +28,24 @@ jobs:
       - name: Run tempo-cli mod release creation command
         run: tempo_cli run full_run_all --settings_json ".tempo.json"
 
+      # --- New step: list all zip files in Modding/releases ---
+      - name: List all release zip files
+        run: |
+          echo Listing all zip files in current_dir\Modding\releases
+          for %%f in ("current_dir\Modding\releases\*.zip") do (
+              echo Found release file: %%~nxf
+          )
+
+      # --- New step: print .tempo.json contents ---
+      - name: Print .tempo.json contents
+        run: |
+          echo Contents of current_dir\.tempo.json:
+          type current_dir\.tempo.json
+
+# make a step to list all files in the current_dir/Modding/releases
+# for each zip above get the file_name.zip and print the filename
+# then print the contents of current_dir/.tempo.json
+
 # have a step here that checks the json file mods info, to get mod names, mod version, description, etc...
 
 # have a step here that makes a release for each using the information above
