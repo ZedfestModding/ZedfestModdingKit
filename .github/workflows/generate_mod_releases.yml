@@ -1,4 +1,4 @@
-name: make_mod_releases
+name: generate_mod_releases
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  make_mod_releases:
-    name: make_mod_releases
+  generate_mod_releases:
+    name: generate_mod_releases
     runs-on: [self-hosted, windows, x64]
 
     steps:
@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Generate mod releases using action-tempo-cli-release
-        uses: Tempo-Organization/action-tempo-cli-release@v1.0
+        uses: Tempo-Organization/action-tempo-cli-release@v1.1
