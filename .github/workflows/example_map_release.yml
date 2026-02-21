@@ -29,9 +29,11 @@ jobs:
         run: tempo_cli run full_run_all --settings_json ".tempo.json"
 
       - name: List all releases
+        shell: cmd
         run: dir Modding/releases /b /a-d *.zip > release_list.txt
 
       - name: Temporary body.md creation
+        shell: cmd
         run: echo temporary placeholder > body.md
 
       # - name: Release
