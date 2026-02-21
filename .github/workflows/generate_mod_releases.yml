@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Generate mod releases using action-tempo-cli-release
-        uses: Tempo-Organization/action-tempo-cli-release@v1.3
+        uses: Tempo-Organization/action-tempo-cli-release@v1.4
