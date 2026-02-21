@@ -26,9 +26,7 @@ jobs:
         run: uv tool install git+https://www.github.com/Tempo-Organization/tempo-cli
 
       - name: Run tempo-cli mod release creation command
-        run: |
-          tempo_cli run full_run_all --settings_json ".tempo.json" | Tee-Object -Variable output
-        shell: pwsh
+        run: tempo_cli run full_run_all --settings_json ".tempo.json"
 
 # have a step here that checks the json file mods info, to get mod names, mod version, description, etc...
 
