@@ -28,20 +28,39 @@ jobs:
       - name: Run tempo-cli mod release creation command
         run: tempo_cli run full_run_all --settings_json ".tempo.json"
 
-      # --- New step: list all zip files in Modding/releases ---
-      - name: List all release zip files
+      # --- New step: list all zip files and print ---
+      - name: List all release zip files and print mod info
         run: |
-          echo Listing all zip files in current_dir\Modding\releases
-          for %%f in ("current_dir\Modding\releases\*.zip") do (
-              echo Found release file: %%~nxf
-          )
+          python - << 'END'
+          import glob, os, json
 
-      # --- New step: print .tempo.json contents ---
-      - name: Print .tempo.json contents
-        run: |
-          echo Contents of current_dir\.tempo.json:
-          type current_dir\.tempo.json
+          releases_dir = r"current_dir\Modding\releases"
+          tempo_json_path = r"current_dir\.tempo.json"
 
+          # List all zip files
+          zip_files = glob.glob(os.path.join(releases_dir, "*.zip"))
+          if zip_files:
+              print("Found release zip files:")
+              for f in zip_files:
+                  print(" -", os.path.basename(f))
+          else:
+              print("No zip files found in", releases_dir)
+
+          # Print .tempo.json contents
+          print("\nContents of .tempo.json:")
+          with open(tempo_json_path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+              print(json.dumps(data, indent=2))
+
+          # Extract mod info (name, version, description)
+          if "mods" in data:
+              print("\nMod info:")
+              for mod in data["mods"]:
+                  name = mod.get("name", "<unknown>")
+                  version = mod.get("version", "<unknown>")
+                  desc = mod.get("description", "<no description>")
+                  print(f" - {name} v{version}: {desc}")
+          END
 # make a step to list all files in the current_dir/Modding/releases
 # for each zip above get the file_name.zip and print the filename
 # then print the contents of current_dir/.tempo.json
