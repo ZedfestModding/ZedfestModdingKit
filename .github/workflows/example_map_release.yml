@@ -1,5 +1,11 @@
 name: example_map_release
 
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
   make_release:
     name: python
