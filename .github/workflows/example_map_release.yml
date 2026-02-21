@@ -28,41 +28,24 @@ jobs:
       - name: Run tempo-cli mod release creation command
         run: tempo_cli run full_run_all --settings_json ".tempo.json"
 
-      # --- New step: list all zip files and print ---
-      - name: List all release zip files and print mod info
-        run: |
-          python - << 'END'
-          import glob, os, json
+      - name: List all releases
+        run: dir Modding/releases /b /a-d *.zip > release_list.txt
 
-          releases_dir = r"current_dir\Modding\releases"
-          tempo_json_path = r"current_dir\.tempo.json"
+      - name: Temporary body.md creation
+        run: echo temporary placeholder > body.md
 
-          # List all zip files
-          zip_files = glob.glob(os.path.join(releases_dir, "*.zip"))
-          if zip_files:
-              print("Found release zip files:")
-              for f in zip_files:
-                  print(" -", os.path.basename(f))
-          else:
-              print("No zip files found in", releases_dir)
+      # - name: Release
+      #   uses: softprops/action-gh-release@v2
+      #   with:
+      #     body_path: "body.md"
+      #     tag_name: ${{ steps.extract_version.outputs.version }}
+      #     files: |
+      #       Modding/releases/*.zip
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-          # Print .tempo.json contents
-          print("\nContents of .tempo.json:")
-          with open(tempo_json_path, "r", encoding="utf-8") as f:
-              data = json.load(f)
-              print(json.dumps(data, indent=2))
 
-          # Extract mod info (name, version, description)
-          if "mods" in data:
-              print("\nMod info:")
-              for mod in data["mods"]:
-                  name = mod.get("name", "<unknown>")
-                  version = mod.get("version", "<unknown>")
-                  desc = mod.get("description", "<no description>")
-                  print(f" - {name} v{version}: {desc}")
-          END
-# make a step to list all files in the current_dir/Modding/releases
-# for each zip above get the file_name.zip and print the filename
+
 # then print the contents of current_dir/.tempo.json
 
 # have a step here that checks the json file mods info, to get mod names, mod version, description, etc...
