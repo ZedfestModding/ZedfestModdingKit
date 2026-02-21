@@ -9,7 +9,7 @@ on:
 jobs:
   make_release:
     name: python
-    runs-on: windows-latest
+    runs-on: [self-hosted, windows, x64]
 
     steps:
       - uses: actions/checkout@v6
