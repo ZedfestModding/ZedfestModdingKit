@@ -15,38 +15,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup tempo-cli
-        uses: Tempo-Organization/setup-tempo-cli@v1.1
-
-      - name: Run tempo-cli mod release creation command
-        run: tempo_cli run full_run_all --settings_json ".tempo.json"
-
-      - name: List all releases
-        shell: cmd
-        run: dir "%CD%\Modding\releases\*.zip" /b /a-d 2>nul > release_list.txt
-
-      # - name: Temporary body.md creation
-      #   shell: cmd
-      #   run: echo temporary placeholder > body.md
-
-      # - name: Release
-      #   uses: softprops/action-gh-release@v2
-      #   with:
-      #     body_path: "body.md"
-      #     tag_name: ${{ steps.extract_version.outputs.version }}
-      #     files: |
-      #       Modding/releases/*.zip
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-
-
-
-# then print the contents of current_dir/.tempo.json
-
-# have a step here that checks the json file mods info, to get mod names, mod version, description, etc...
-
-# have a step here that makes a release for each using the information above
-
-# add mod version
-# add mod description
-# add way to increment specific mod versions through commitizen logic
+      - name: Generate mod releases using action-tempo-cli-release
+        uses: Tempo-Organization/action-tempo-cli-release@v1.0
