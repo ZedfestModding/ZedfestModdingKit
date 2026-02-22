@@ -1,5 +1,9 @@
 name: generate_mod_releases
 
+permissions:
+  contents: write
+  discussions: write
+
 on:
   push:
     branches:
